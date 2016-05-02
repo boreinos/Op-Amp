@@ -1,0 +1,23 @@
+* source 433OPAMP
+M_M1         N15033 0 N14828 N14828 Mbreakn   
++ W=1.2e-5         
+M_M2         N14997 N15408 N14828 N14828 MbreakN   
++ W=1.2e-5         
+M_M3         N15033 N15033 N14615 N14615 Mbreakp   
++ W=7.5e-6         
+M_M4         N14997 N15033 N14615 N14615 Mbreakp   
++ W=7.5e-6         
+M_M5         N14828 N14684 N14723 N14723 Mbreakn   
++ W=2.0e-6         
+M_M6         N15118 N14997 N14615 N14615 Mbreakp   
++ W=1.88e-4         
+M_M7         N15118 N14684 N14723 N14723 Mbreakn   
++ W=2.5e-5         
+V_V1         N14615 0 2.5Vdc
+V_V2         0 N14723 2.5Vdc
+R_R1         N14684 N14615  70K TC=0,0 
+M_M8         N14684 N14684 N14723 N14723 Mbreakn   
++ W=2.0e-6         
+C_C1         N14997 N15118  3p  TC=0,0 
+C_C2         0 N15118  10p  TC=0,0 
+V_V4         N15408 0 DC 0Vdc AC 1Vac 

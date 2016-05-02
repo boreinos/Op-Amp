@@ -1,0 +1,159 @@
+
+**** 05/02/16 00:49:32 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ F:\Boris\Documents\Documents\ECE 433\PSPICEPROJECTS\433opamp-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../433opamp-pspicefiles/433opamp.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1 10000000
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 433OPAMP
+M_M1         N15033 0 N14828 N14828 Mbreakn   
++ W=1.2e-5         
+M_M2         N14997 N15408 N14828 N14828 MbreakN   
++ W=1.2e-5         
+M_M3         N15033 N15033 N14615 N14615 Mbreakp   
++ W=7.5e-6         
+M_M4         N14997 N15033 N14615 N14615 Mbreakp   
++ W=7.5e-6         
+M_M5         N14828 N14684 N14723 N14723 Mbreakn   
++ W=2.0e-6         
+M_M6         N15118 N14997 N14615 N14615 Mbreakp   
++ W=1.88e-4         
+M_M7         N15118 N14684 N14723 N14723 Mbreakn   
++ W=2.5e-5         
+V_V1         N14615 0 2.5Vdc
+V_V2         0 N14723 2.5Vdc
+R_R1         N14684 N14615  70K TC=0,0 
+M_M8         N14684 N14684 N14723 N14723 Mbreakn   
++ W=2.0e-6         
+C_C1         N14997 N15118  3p  TC=0,0 
+C_C2         0 N15118  10p  TC=0,0 
+V_V4         N15408 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING bias.cir ****
+.END
+
+**** 05/02/16 00:49:32 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ F:\Boris\Documents\Documents\ECE 433\PSPICEPROJECTS\433opamp-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Mbreakn         Mbreakp         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L  500.000000E-09  500.000000E-09 
+           W  100.000000E-06  100.000000E-06 
+          LD   80.000000E-09   90.000000E-09 
+         VTO     .7             -.8          
+          KP   50.000000E-06   12.500000E-06 
+       GAMMA     .45             .4          
+         PHI     .9              .8          
+      LAMBDA     .01             .02         
+          IS   10.000000E-15   10.000000E-15 
+          JS   10.000000E-09    5.000000E-09 
+          PB     .9              .9          
+        PBSW     .9              .9          
+          CJ  560.000000E-06  940.000000E-06 
+        CJSW    3.500000E-12    3.200000E-12 
+          MJ     .45                         
+        MJSW     .2              .3          
+        CGSO    0               0            
+        CGDO    0             300.000000E-12 
+        CGBO    0               0            
+        NSUB  900.000000E+12  500.000000E+12 
+         TOX    9.000000E-09    9.000000E-09 
+          XJ    0               0            
+          UO  350             100            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 05/02/16 00:49:32 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ F:\Boris\Documents\Documents\ECE 433\PSPICEPROJECTS\433opamp-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14615)    2.5000 (N14684)   -1.2040 (N14723)   -2.5000 (N14828)    -.8716     
+
+(N14997)    1.2794 (N15033)    1.2794 (N15118)     .6505 (N15408)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -7.795E-04
+    V_V2        -7.795E-04
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   3.90E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/02/16 00:49:32 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ F:\Boris\Documents\Documents\ECE 433\PSPICEPROJECTS\433opamp-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

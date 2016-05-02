@@ -1,0 +1,62 @@
+
+**** 05/01/16 21:51:11 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ F:\Boris\Documents\Documents\ECE 433\PSPICEPROJECTS\433opamp-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../433opamp-pspicefiles/433opamp.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC DEC V_V3 0 2.5 100 
+-------------$
+ERROR(ORPSIM-16104): Invalid start value
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 433OPAMP
+M_M1         N15033 N16482 N14828 N14828 Mbreakn   
++ W=1.2e-5         
+M_M2         N14997 0 N14828 N14828 MbreakN   
++ W=1.2e-5         
+M_M3         N15033 N15033 N14615 N14615 Mbreakp   
++ W=7.5e-6         
+M_M4         N14997 N15033 N14615 N14615 Mbreakp   
++ W=7.5e-6         
+M_M5         N14828 N14684 N14723 N14723 Mbreakn   
++ W=2.0e-6         
+M_M6         N15118 N14997 N14615 N14615 Mbreakp   
++ W=1.88e-4         
+M_M7         N15118 N14684 N14723 N14723 Mbreakn   
++ W=2.5e-5         
+V_V1         N14615 0 2.5Vdc
+V_V2         0 N14723 2.5Vdc
+R_R1         N14684 N14615  70K TC=0,0 
+M_M8         N14684 N14684 N14723 N14723 Mbreakn   
++ W=2.0e-6         
+C_C1         N14997 N15118  3p  TC=0,0 
+C_C2         0 N15118  10p  TC=0,0 
+V_V3         N16482 0 0Vdc
+
+**** RESUMING bias.cir ****
+.END
+
